@@ -2,7 +2,7 @@
  * Copyright (c) 2015 Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License.
  * 
- * Script to create add-on YAML files.
+ * Script to convert JSON data for add-on YAML files.
  */
 
 var common = require('./common.js'),
@@ -43,7 +43,7 @@ function exportAPIs (api, type) {
 	return rv;
 }
 
-// Returns a JSON object formatted according to the JSCA specification
+// Returns a JSON object with annotated members for add-on YAML files
 exports.exportData = function exportJSON (apis) {
 	var className = null,
 		cls = {},
