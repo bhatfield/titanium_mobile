@@ -1,0 +1,23 @@
+name: <%- doc.name %>
+platforms: <%- JSON.stringify(doc.platforms) %>
+
+<% if (doc.properties && doc.properties.length > 0) { %>
+properties:
+<% doc.properties.forEach(function (prop) { %>
+  - name: <%- prop.name %>
+    platforms: <%- JSON.stringify(prop.platforms) %>
+<% }); } %>
+
+<% if (doc.methods && doc.methods.length > 0) { %>
+methods:
+<% doc.methods.forEach(function (method) { %>
+  - name: <%- method.name %>
+    platforms: <%- JSON.stringify(method.platforms) %>
+<% }); } %>
+
+<% if (doc.events && doc.events.length > 0) { %>
+events:
+<% doc.events.forEach(function (event) { %>
+  - name: <%- event.name %>
+    platforms: <%- JSON.stringify(event.platforms) %>
+<% }); } %>
